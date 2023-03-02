@@ -17,6 +17,16 @@ struct Vector3
 
 	Vector3(float x, float y, float z);
 
+
+	static const Vector3 Zero;		// Shorthand for writing Vector3(0, 0, 0).
+	static const Vector3 One;		// Shorthand for writing Vector3(1, 1, 1).
+	static const Vector3 Up;		// Shorthand for writing Vector3(0, 1, 0).
+	static const Vector3 Down;		// Shorthand for writing Vector3(0, -1, 0).
+	static const Vector3 Left;		// Shorthand for writing Vector3(-1, 0, 0).
+	static const Vector3 Right;		// Shorthand for writing Vector3(1, 0, 0).
+	static const Vector3 Forward;	// Shorthand for writing Vector3(0, 0, 1).
+	static const Vector3 Back;		// Shorthand for writing Vector3(0, 0, -1).
+
 	// Operations
 	Vector3 operator+(const Vector3 &other) const;
 	Vector3 &operator+=(const Vector3 &other);
