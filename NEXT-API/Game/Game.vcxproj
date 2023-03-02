@@ -179,6 +179,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\stdafx.h" />
     <ClInclude Include="src\App\app.h" />
     <ClInclude Include="src\App\AppSettings.h" />
     <ClInclude Include="src\App\main.h" />
@@ -186,8 +187,8 @@
     <ClInclude Include="src\App\SimpleSound.h" />
     <ClInclude Include="src\App\SimpleSprite.h" />
     <ClInclude Include="src\App\TextureLoader.h" />
-    <ClInclude Include="include\stdafx.h" />
     <ClInclude Include="include\targetver.h" />
+    <ClInclude Include="src\Math\Vector3\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App\app.cpp" />
@@ -203,6 +204,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Math\Vector3\Vector3.cpp" />
+    <ClCompile Include="src\Math\Vector3\Vector3Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
