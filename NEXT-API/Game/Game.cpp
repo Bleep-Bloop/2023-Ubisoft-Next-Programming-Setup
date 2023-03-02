@@ -7,7 +7,10 @@
 #include <math.h>  
 //------------------------------------------------------------------------
 #include "./src/App/app.h"
+
 //------------------------------------------------------------------------
+#include <string>
+#include "./src//Math/Vector3/Vector3Test.cpp"
 
 //------------------------------------------------------------------------
 // Eample data....
@@ -27,6 +30,13 @@ enum
 //------------------------------------------------------------------------
 void Init()
 {
+
+	std::string resultString = ("Vector3Tests: \n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
+	OutputDebugStringA(resultString.c_str());
+	Vector3Test::RunTests();
+
+	
+
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
 	testSprite = App::CreateSprite(".\\Data\\Test.bmp", 8, 4);
