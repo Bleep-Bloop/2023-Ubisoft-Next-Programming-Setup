@@ -73,30 +73,35 @@ bool Vector3::operator!=(const Vector3& other) const // ***
 
 Vector3 Vector3::Normalize() const
 {
-	return Vector3();
+	Vector3 v;
+	if (this->SqrMagnitude() > 0)
+	{
+		v = *this / this->Magnitude();
+	}
+	return v;
 }
 
 float Vector3::Magnitude() const
 {
-	return 0.0f;
+	return sqrtf(x * x + y * y + z * z);
 }
 
 float Vector3::SqrMagnitude() const
 {
-	return 0.0f;
+	return x * x + y * y + z * z;
 }
 
 float Vector3::Dot(const Vector3& other) const
 {
-	return 0.0f;
+	return x * other.x + y * other.y + z * other.z;
 }
 
 Vector3 Vector3::Cross(const Vector3& other) const
 {
-	return Vector3();
+	return Vector3(y * other.z - other.y * z, z * other.x - other.z * x, x * other.y - other.x * y);
 }
 
 std::string Vector3::ToString()
 {
-	return std::string();
+	return "(" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ")";
 }
