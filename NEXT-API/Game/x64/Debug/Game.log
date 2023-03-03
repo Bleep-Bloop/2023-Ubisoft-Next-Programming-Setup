@@ -1,3 +1,2 @@
-﻿  Game.vcxproj -> C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\x64\Debug\Game.exe
-  C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\\Game\glut\bin\x64\freeglut.dll
-  1 File(s) copied
+﻿  ASprite.cpp
+C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\src\Objects\ASprite\ASprite.h(12,12): error C2079: 'ASprite::tester' uses undefined class 'Transform'

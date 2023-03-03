@@ -39,6 +39,7 @@ void Init()
 
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
+	/*
 	testSprite = App::CreateSprite(".\\Data\\Test.bmp", 8, 4);
 	testSprite->SetPosition(400.0f, 400.0f);
 	float speed = 1.0f / 15.0f;
@@ -47,6 +48,7 @@ void Init()
 	testSprite->CreateAnimation(ANIM_RIGHT, speed, { 16,17,18,19,20,21,22,23 });
 	testSprite->CreateAnimation(ANIM_FORWARDS, speed, { 24,25,26,27,28,29,30,31 });
 	testSprite->SetScale(1.0f);
+	*/
 	//------------------------------------------------------------------------
 }
 

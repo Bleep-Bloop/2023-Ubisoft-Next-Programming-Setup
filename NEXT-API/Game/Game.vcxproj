@@ -191,6 +191,7 @@
     <ClInclude Include="src\Components\Transform\Transform.h" />
     <ClInclude Include="src\Graphics\Renderer\Renderer.h" />
     <ClInclude Include="src\Math\Vector3\Vector3.h" />
+    <ClInclude Include="src\Objects\ASprite\ASprite.h" />
     <ClInclude Include="src\Scene\Scene.h" />
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +212,7 @@
     <ClCompile Include="src\Graphics\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Math\Vector3\Vector3.cpp" />
     <ClCompile Include="src\Math\Vector3\Vector3Test.cpp" />
+    <ClCompile Include="src\Objects\ASprite\ASprite.cpp" />
     <ClCompile Include="src\Scene\Scene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
