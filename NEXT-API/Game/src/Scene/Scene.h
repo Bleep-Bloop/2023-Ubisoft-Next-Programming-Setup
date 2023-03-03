@@ -15,6 +15,7 @@ public:
 	float GetDeltaTime();
 
 	float GetTime();
+
 private:
 	// Time
 	float m_deltaTime; // time since last update
@@ -22,6 +23,10 @@ private:
 	std::chrono::time_point<std::chrono::steady_clock> m_current;
 	std::chrono::duration<float> m_time; // time passed since beginning of cycle
 	
+	// Helper Functions
+	void SetTime(float deltaTime);
+
+
 
 	// ToDo: Pause(), GetUI()
 };
