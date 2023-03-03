@@ -16,6 +16,8 @@ public:
 
         float n = 2.0f;
 
+        TestEquals(v, v2);
+        TestNotEquals(v, v2);
         TestAdd(v, v2);
         TestCompoundAdd(v, v2);
         TestSubtract(v, v2);
@@ -28,12 +30,41 @@ public:
         TestNormalize(v);
         TestDot(v, v2);
         TestCross(v, v2);
-        TestEquals(v, v2);
-        TestNotEquals(v, v2);
+        TestPrintString(v);
+        
 
     }
 
 private:
+
+    static void TestEquals(Vector3& v, Vector3& v2)
+    {
+        if (v == v2)
+        {
+            std::string resultString = ("TestEquals: MATCH \n");
+            OutputDebugStringA(resultString.c_str());
+        }
+        else
+        {
+            std::string resultString = ("TestEquals: NO MATCH \n");
+            OutputDebugStringA(resultString.c_str());
+        }
+
+    }
+
+    static void TestNotEquals(Vector3& v, Vector3& v2)
+    {
+        if (v != v2)
+        {
+            std::string resultString = ("TestNotEquals: NO MATCH \n");
+            OutputDebugStringA(resultString.c_str());
+        }
+        else
+        {
+            std::string resultString = ("TestNotEquals: MATCH \n");
+            OutputDebugStringA(resultString.c_str());
+        }
+    }
 
     static void TestAdd(Vector3& v, Vector3& v2)
     {
@@ -156,32 +187,12 @@ private:
 
     }
 
-    static void TestEquals(Vector3& v, Vector3& v2)
+    static void TestPrintString(Vector3& v)
     {
-        if (v == v2)
-        {
-            std::string resultString = ("TestEquals: MATCH \n");
-            OutputDebugStringA(resultString.c_str());
-        }
-        else
-        {
-            std::string resultString = ("TestEquals: NO MATCH \n");
-            OutputDebugStringA(resultString.c_str());
-        }
+        
+        std::string resultString = ("PrintString(): " + v.ToString() + "\n");
+        OutputDebugStringA(resultString.c_str());
 
     }
-    
-    static void TestNotEquals(Vector3& v, Vector3& v2)
-    {
-        if (v != v2)
-        {
-            std::string resultString = ("TestNotEquals: NO MATCH \n");
-            OutputDebugStringA(resultString.c_str());
-        }
-        else
-        {
-            std::string resultString = ("TestNotEquals: MATCH \n");
-            OutputDebugStringA(resultString.c_str());
-        }
-    }
+
 };

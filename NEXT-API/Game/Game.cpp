@@ -31,7 +31,7 @@ enum
 void Init()
 {
 
-	std::string resultString = ("Vector3Tests: \n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
+	std::string resultString = ("Vector3Tests:\n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
 	OutputDebugStringA(resultString.c_str());
 	Vector3Test::RunTests();
 
