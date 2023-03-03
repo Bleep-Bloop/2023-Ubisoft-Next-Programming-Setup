@@ -3,6 +3,12 @@
 
 Scene::Scene()
 {
+
+	// Initialize Time Variables
+	m_start = std::chrono::steady_clock::now();
+	m_current = m_start;
+	m_time = m_current - m_start;
+
 }
 
 void Scene::Init()
@@ -12,8 +18,6 @@ void Scene::Init()
 void Scene::Update(float deltaTime)
 {
 	SetTime(deltaTime);
-
-	
 }
 
 float Scene::GetDeltaTime()
