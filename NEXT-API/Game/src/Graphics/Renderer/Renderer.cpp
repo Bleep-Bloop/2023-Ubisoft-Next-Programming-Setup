@@ -1,12 +1,16 @@
 #include "stdafx.h"
 #include "Renderer.h"
 
-Renderer::Renderer()
+#include "../src/Scene/Scene.h"
+
+
+Renderer::Renderer() : m_scene(nullptr)
 {
 }
 
-void Renderer::Init(Scene& scene)
+void Renderer::Init(Scene &scene)
 {
+	m_scene = &scene;
 }
 
 void Renderer::Update(float deltaTime)
