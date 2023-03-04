@@ -1,6 +1,8 @@
 #pragma once
 
 #include <chrono> // more reliable then glutGet(GLUT_ELAPSED_TIME); ToDo: Note in documentation
+#include "../Components/Transform/Transform.h"
+
 class Vector3;
 
 class Scene
@@ -16,6 +18,11 @@ public:
 
 	float GetTime();
 
+	Transform GetTransform(int id) const;
+
+	void SetTransform(int id, Transform transform);
+
+
 private:
 	// Time
 	float m_deltaTime; // Time since last update
@@ -25,6 +32,10 @@ private:
 	
 	// Helper Functions
 	void SetTime(float deltaTime);
+
+	// Component Arrays
+	std::vector<Transform> m_transform;
+
 
 	// ToDo: Pause(), GetUI()
 	

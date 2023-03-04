@@ -9,6 +9,7 @@ Scene::Scene()
 	m_current = m_start;
 	m_time = m_current - m_start;
 
+
 }
 
 void Scene::Init()
@@ -28,6 +29,16 @@ float Scene::GetDeltaTime()
 float Scene::GetTime()
 {
 	return m_time.count();
+}
+
+Transform Scene::GetTransform(int id) const
+{
+	return m_transform[id];
+}
+
+void Scene::SetTransform(int id, Transform transform)
+{
+	m_transform[id] = transform;
 }
 
 void Scene::SetTime(float deltaTime)
