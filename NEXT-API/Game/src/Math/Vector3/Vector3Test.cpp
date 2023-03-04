@@ -30,7 +30,7 @@ public:
         TestCross(v, v2);
         TestEquals(v, v2);
         TestNotEquals(v, v2);
-        //TestDistance(v, v2);
+        TestDistance(v, v2);
 
     }
 
@@ -186,13 +186,14 @@ private:
         }
     }
 
-    /*
     static void TestDistance(Vector3& v, Vector3& v2)
     {
         float result = Vector3::Distance(v, v2);
         std::string resultString = ("TestDistance: " + std::to_string(result) + "\n");
         OutputDebugStringA(resultString.c_str());
     }
-    */
+
+
+
 
 };

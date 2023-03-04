@@ -1,13 +1,3 @@
-﻿  Collider.cpp
-C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\src\Scene\Scene.h(7,14): warning C4099: 'Vector3': type name first seen using 'struct' now seen using 'class'
-C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\src\Math\Vector3\Vector3.h(7): message : see declaration of 'Vector3'
-  Transform.cpp
-  Vector3.cpp
-  Vector3Test.cpp
-  Scene.cpp
-C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\src\Scene\Scene.h(7,14): warning C4099: 'Vector3': type name first seen using 'struct' now seen using 'class'
-C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\src\Math\Vector3\Vector3.h(7): message : see declaration of 'Vector3'
-  Generating Code...
-  Game.vcxproj -> C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\x64\Debug\Game.exe
+﻿  Game.vcxproj -> C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\x64\Debug\Game.exe
   C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\\Game\glut\bin\x64\freeglut.dll
   1 File(s) copied
