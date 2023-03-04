@@ -1,6 +1,6 @@
 #pragma once
 
-// ToDo: Potential delete. Is going to be used for 3D rendering but I might just go with sprites. Time will tell.
+// ToDo: Potential delete. It was going to be used for 3D rendering but I might just go with sprites. Time will tell.
 
 class Scene;
 
