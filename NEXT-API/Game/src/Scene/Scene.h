@@ -2,6 +2,7 @@
 
 #include <chrono> // more reliable then glutGet(GLUT_ELAPSED_TIME); ToDo: Note in documentation
 #include "../Components/Transform/Transform.h"
+#include "../Components/Collider/Collider.h"
 
 class Vector3;
 
@@ -22,6 +23,10 @@ public:
 
 	void SetTransform(int id, Transform transform);
 
+	Collider GetCollider(int id) const;
+	 
+	void SetCollider(int id, Collider collider);
+
 
 private:
 	// Time
@@ -40,6 +45,7 @@ private:
 
 	// Component Arrays
 	std::vector<Transform> m_transform;
+	std::vector<Collider> m_collider;
 
 
 	// ToDo: Pause(), GetUI()

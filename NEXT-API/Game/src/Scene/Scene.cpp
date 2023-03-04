@@ -41,6 +41,16 @@ void Scene::SetTransform(int id, Transform transform)
 	m_transform[id] = transform;
 }
 
+Collider Scene::GetCollider(int id) const
+{
+	return m_collider[id];
+}
+
+void Scene::SetCollider(int id, Collider collider)
+{
+	m_collider[id] = collider;
+}
+
 void Scene::SetTime(float deltaTime)
 {
 	m_deltaTime = deltaTime;
