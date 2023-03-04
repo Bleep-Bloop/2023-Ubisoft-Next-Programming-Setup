@@ -10,11 +10,11 @@ const Vector3 Vector3::Right = Vector3(1, 0, 0);
 const Vector3 Vector3::Forward = Vector3(0, 0, 1);
 const Vector3 Vector3::Back = Vector3(0, 0, -1);
 
-Vector3::Vector3() : x(0.0f), y(0.0f), z(0.0f)
+Vector3::Vector3() : x(0.0f), y(0.0f), z(0.0f), w(1.0f)
 {
 }
 
-Vector3::Vector3(float inX, float inY, float inZ) : x(inX), y(inY), z(inZ)
+Vector3::Vector3(float inX, float inY, float inZ) : x(inX), y(inY), z(inZ), w(1.0f)
 {
 }
 
