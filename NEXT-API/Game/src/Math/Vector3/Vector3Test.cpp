@@ -10,7 +10,7 @@ public:
     static void RunTests()
     {
         Vector3 v = Vector3(25.0f, 25.0f, 25.0f);
-        Vector3 v2 = Vector3(5.0f, 5.0f, 5.0f);
+        Vector3 v2 = Vector3(1.0f, 1.0f, 1.0f);
 
         Vector3 vUp = Vector3::Up;
 
@@ -30,6 +30,7 @@ public:
         TestCross(v, v2);
         TestEquals(v, v2);
         TestNotEquals(v, v2);
+        //TestDistance(v, v2);
 
     }
 
@@ -184,4 +185,14 @@ private:
             OutputDebugStringA(resultString.c_str());
         }
     }
+
+    /*
+    static void TestDistance(Vector3& v, Vector3& v2)
+    {
+        float result = Vector3::Distance(v, v2);
+        std::string resultString = ("TestDistance: " + std::to_string(result) + "\n");
+        OutputDebugStringA(resultString.c_str());
+    }
+    */
+
 };

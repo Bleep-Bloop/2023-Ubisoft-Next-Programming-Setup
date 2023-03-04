@@ -1,6 +1,9 @@
 #pragma once
 
 #include <chrono> // more reliable then glutGet(GLUT_ELAPSED_TIME); ToDo: Note in documentation
+#include "../Components/Transform/Transform.h"
+#include "../Components/Collider/Collider.h"
+
 class Vector3;
 
 class Scene
@@ -16,6 +19,15 @@ public:
 
 	float GetTime();
 
+	Transform GetTransform(int id) const;
+
+	void SetTransform(int id, Transform transform);
+
+	Collider GetCollider(int id) const;
+	 
+	void SetCollider(int id, Collider collider);
+
+
 private:
 	// Time
 	float m_deltaTime; // Time since last update
@@ -25,6 +37,16 @@ private:
 	
 	// Helper Functions
 	void SetTime(float deltaTime);
+
+	// Unique ID
+	int m_id; // Where this used?
+
+	// TooDo: int CreateId();
+
+	// Component Arrays
+	std::vector<Transform> m_transform;
+	std::vector<Collider> m_collider;
+
 
 	// ToDo: Pause(), GetUI()
 	
