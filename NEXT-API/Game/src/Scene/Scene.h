@@ -33,6 +33,11 @@ private:
 	// Helper Functions
 	void SetTime(float deltaTime);
 
+	// Unique ID
+	int m_id; // Where this used?
+
+	// TooDo: int CreateId();
+
 	// Component Arrays
 	std::vector<Transform> m_transform;
 
