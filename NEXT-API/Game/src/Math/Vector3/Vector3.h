@@ -67,6 +67,14 @@ struct Vector3
 
 	std::string ToString();
 
+	/// <summary>
+	/// Returns the distance from one vector to another.
+	/// </summary>
+	/// <param name="from">Vector 1</param>
+	/// <param name="to">Vector 2</param>
+	/// <returns>float - distance between</returns>
+	static float Distance(Vector3 from, Vector3 to);
+
 
 
 };

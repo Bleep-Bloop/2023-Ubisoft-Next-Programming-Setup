@@ -114,3 +114,12 @@ std::string Vector3::ToString()
 {
 	return "(" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ")";
 }
+
+float Vector3::Distance(Vector3 from, Vector3 to)
+{
+	float x = (from.x - to.x) * (from.x - to.x);
+	float y = (from.y - to.y) * (from.y - to.y);
+	float z = (from.z - to.z) * (from.z - to.z);
+	return sqrtf(x + y + z);
+	// return (from - to).Magnitude(); // Gets the same result but I don't want to rely on Magnitude().
+}
