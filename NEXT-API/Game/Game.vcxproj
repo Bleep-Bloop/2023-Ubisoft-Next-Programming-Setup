@@ -215,6 +215,7 @@
     <ClCompile Include="src\Math\Vector3\Vector3.cpp" />
     <ClCompile Include="src\Math\Vector3\Vector3Test.cpp" />
     <ClCompile Include="src\Objects\GameObject.cpp" />
+    <ClCompile Include="src\Objects\GameObjectTest.cpp" />
     <ClCompile Include="src\Scene\Scene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,13 +2,17 @@
 #include "GameObject.h"
 
 
-GameObject::GameObject(CSimpleSprite &sprite, Transform transform)
+GameObject::GameObject(Scene& scene, CSimpleSprite &sprite, Transform transform)
 {
 
 	this->sprite = &sprite;
 	
 	this->SetTransform(transform);
-	
+
+	this->scene = &scene;
+
+	// ToDo: Add to scene's GameObject vector. existingGameObjects.push_back(this); 
+
 }
 
 void GameObject::SetTransform(Transform transform)
@@ -22,6 +26,7 @@ void GameObject::SetTransform(Transform transform)
 
 	// ToDo: Handle rotation on x and y.
 	this->sprite->SetAngle(this->transform.rotation.z);
+	
 }
 
 Transform GameObject::GetTransform()
@@ -32,4 +37,9 @@ Transform GameObject::GetTransform()
 void GameObject::Destroy()
 {
 	delete this;
+}
+
+void GameObject::Render()
+{
+	this->sprite->Draw();
 }
