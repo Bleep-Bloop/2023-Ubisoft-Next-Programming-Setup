@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include "./GameObject.h"
 #include "../Math/Vector3/Vector3.h"
-
+#include "../Scene/Scene.h"
 
 class GameObjectTest
 {
@@ -10,7 +10,7 @@ class GameObjectTest
 public:
     static void RunTests()
     {
-
+        
         Scene* testScene = new Scene();
         CSimpleSprite* testSprite = App::CreateSprite(".\\..\\Data\\steambot_03.bmp", 5, 1);
         Transform testTransform;
@@ -19,6 +19,8 @@ public:
         testTransform.scale = Vector3(5,1,1);
         
         CreateGameObjectTest(*testScene, *testSprite, testTransform);
+
+        OutputDebugStringA("D:");
        
     }
 
