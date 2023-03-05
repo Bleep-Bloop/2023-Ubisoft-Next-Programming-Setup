@@ -26,6 +26,8 @@ public:
 	
 	GameObject(Scene& scene, CSimpleSprite& sprite, Transform transform);
 
+	GameObject() = default; 
+
 	/// <summary>
 	/// Sets the GameObject's location, rotation, and scale (changes visible in sprite).
 	/// </summary>

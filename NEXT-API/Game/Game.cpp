@@ -17,7 +17,7 @@
 // Eample data....
 //------------------------------------------------------------------------
 CSimpleSprite* testSprite; // Question why no new?
-enum
+enum testSpriteAnims
 {
 	ANIM_FORWARDS,
 	ANIM_BACKWARDS,
@@ -30,7 +30,8 @@ enum
 /// TESTING GAME OBJECT
 //#include "./src/Objects/GameObject.h"
 
-
+// Testing Character stat storing thing
+#include "./src/Character/Character.h"
 
 
 //------------------------------------------------------------------------
@@ -42,31 +43,33 @@ void Init()
 	
 	//------------------------------------------------------------------------
 	// TESTS
-	std::string resultString = ("Vector3Tests:  \n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
-	OutputDebugStringA(resultString.c_str());
-	Vector3Test::RunTests();
+	//std::string resultString = ("Vector3Tests:  \n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
+	//OutputDebugStringA(resultString.c_str());
+	//Vector3Test::RunTests();
 
-	std::string resultString2 = ("GameObjectTests:\n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
-	OutputDebugStringA(resultString2.c_str());
-	GameObjectTest::RunTests();
+	//std::string resultString2 = ("GameObjectTests:\n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
+	//OutputDebugStringA(resultString2.c_str());
+	//GameObjectTest::RunTests();
 	//------------------------------------------------------------------------
 
 	// Create robot
-	testSprite = App::CreateSprite(".\\data\\steambot_03.bmp", 5, 1);
+	///////testSprite = App::CreateSprite(".\\data\\steambot_03.bmp", 5, 1);
+	
+	//auto testchar = new TestCharacter2();
 	
 
-	//------------------------------------------------------------------------
+	//--CREATING SPRITE AND SETTING UP ANIMATIONS ----------------------------------------------------------------------
 	// Example Sprite Code....
-	/*
+	
 	testSprite = App::CreateSprite(".\\Data\\Test.bmp", 8, 4);
-	testSprite->SetPosition(2000.0f, 2000.0f); //(400.0f, 400.0f);
+	testSprite->SetPosition(400.0f, 400.0f); //(400.0f, 400.0f);
 	float speed = 1.0f / 15.0f;
 	testSprite->CreateAnimation(ANIM_BACKWARDS, speed, { 0,1,2,3,4,5,6,7 });
 	testSprite->CreateAnimation(ANIM_LEFT, speed, { 8,9,10,11,12,13,14,15 });
 	testSprite->CreateAnimation(ANIM_RIGHT, speed, { 16,17,18,19,20,21,22,23 });
 	testSprite->CreateAnimation(ANIM_FORWARDS, speed, { 24,25,26,27,28,29,30,31 });
 	testSprite->SetScale(1.0f);
-	*/
+	
 	//------------------------------------------------------------------------
 }
 
@@ -148,7 +151,7 @@ void Render()
 {
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
-	//testSprite->Draw();
+	testSprite->Draw();
 	//------------------------------------------------------------------------
 	
 
