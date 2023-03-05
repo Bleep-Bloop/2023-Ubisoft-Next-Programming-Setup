@@ -193,6 +193,7 @@
     <ClInclude Include="src\Graphics\Renderer\Renderer.h" />
     <ClInclude Include="src\Math\Vector3\Vector3.h" />
     <ClInclude Include="src\Objects\GameObject.h" />
+    <ClInclude Include="src\Objects\Actor\GOActor.h" />
     <ClInclude Include="src\Scene\Scene.h" />
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +217,7 @@
     <ClCompile Include="src\Math\Vector3\Vector3Test.cpp" />
     <ClCompile Include="src\Objects\GameObject.cpp" />
     <ClCompile Include="src\Objects\GameObjectTest.cpp" />
+    <ClCompile Include="src\Objects\Actor\GOActor.cpp" />
     <ClCompile Include="src\Scene\Scene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
