@@ -189,6 +189,11 @@
     <ClInclude Include="src\App\TextureLoader.h" />
     <ClInclude Include="include\targetver.h" />
     <ClInclude Include="src\Character\Character.h" />
+<<<<<<< HEAD
+=======
+    <ClInclude Include="src\Character\TestCharacter1.h" />
+    <ClInclude Include="src\Character\TestCharacter2.h" />
+>>>>>>> 0aea93d9bf348c78b119cdf60cbf597a826cb6c0
     <ClInclude Include="src\Components\Collider\Collider.h" />
     <ClInclude Include="src\Components\Transform\Transform.h" />
     <ClInclude Include="src\Graphics\Renderer\Renderer.h" />
