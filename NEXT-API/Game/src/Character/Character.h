@@ -1,5 +1,6 @@
 #pragma once
 
+// ToDo: Namespace for characters. Then I can get information by Characters::BoomBot
 /// <summary>
 /// Default structure for building a character.
 /// Holds MovementSpeed, PlayerHealth, MaxActiveBombs, and Sprite.
