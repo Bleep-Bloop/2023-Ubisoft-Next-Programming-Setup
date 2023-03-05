@@ -3,8 +3,9 @@
 #include <chrono> // more reliable then glutGet(GLUT_ELAPSED_TIME); ToDo: Note in documentation
 #include "../Components/Transform/Transform.h"
 #include "../Components/Collider/Collider.h"
+#include "../Objects/GameObject.h"
 
-class Vector3;
+struct Vector3;
 
 class Scene
 {
@@ -44,6 +45,8 @@ private:
 	// TooDo: int CreateId();
 
 	// Component Arrays
+	// ToDo :std::vector<GameObject> _gameObjects;
+
 	std::vector<Transform> m_transform;
 	std::vector<Collider> m_collider;
 
