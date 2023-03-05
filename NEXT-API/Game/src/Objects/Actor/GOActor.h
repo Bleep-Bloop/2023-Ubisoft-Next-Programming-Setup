@@ -3,32 +3,47 @@
 #include "../GameObject.h"
 #include "../../App/SimpleSprite.h"
 
-/////struct sAnimation; // Handle this in the character class then just pass it to 
-/*{
-	unsigned int m_id;
-	float m_speed;
-	std::vector<int> m_frames;
-};
-*/
 
+enum class MovementDirection
+{
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT,
+};
 
 /// <summary>
 /// GOActor is a GameObject that has built-in movement logic. They are responsible for physical interaction between 
 /// Player/AI and the game world.
 /// </summary>
-class GoActor : GameObject
+class GOActor : GameObject
 {
 
-	GoActor(Scene& scene, CSimpleSprite* sprite, Transform transform);
+public:
 
+	GOActor(Scene& scene, CSimpleSprite& sprite, Transform transform);
 
+	// ToDo: Base movement on Character's walk speed;
+	/// <summary>
+	/// Moves the character in the given direction.
+	/// </summary>
+	/// <param name="direction"></param>
+	void Move(MovementDirection direction);
+
+	void SetCharacterMoveSpeed(float MoveSpeed);
 
 	/// <summary>
 	/// Sets animation to be played
 	/// </summary>
 	// ToDo: void PlayAnimation();
-	// ToDo/Question: Should I create animations in a character class/struct that holds all the information for said character?
+	// Note: I am going to have the animations in the specific characters struct.
 
+private:
+
+	// Used in Move(); // ToDo: Move
+	float x, y; 
+
+	float characterMoveSpeed = 1;
 
 };
 
