@@ -1,4 +1,5 @@
-﻿  GOActor.cpp
-  Game.vcxproj -> C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\x64\Debug\Game.exe
-  C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\\Game\glut\bin\x64\freeglut.dll
-  1 File(s) copied
+﻿  Game.cpp
+C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\Game.cpp(54,8): error C2039: 'TestCreateActor': is not a member of 'Scene'
+C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\src\Scene\Scene.h(12): message : see declaration of 'Scene'
+  Scene.cpp
+  Generating Code...
