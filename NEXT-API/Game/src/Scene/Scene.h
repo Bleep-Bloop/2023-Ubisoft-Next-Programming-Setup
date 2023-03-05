@@ -3,7 +3,9 @@
 #include <chrono> // more reliable then glutGet(GLUT_ELAPSED_TIME); ToDo: Note in documentation
 #include "../Components/Transform/Transform.h"
 #include "../Components/Collider/Collider.h"
+#include "../src/Objects/Actor/GOActor.h"
 #include "../Objects/GameObject.h"
+
 
 struct Vector3;
 
@@ -29,8 +31,8 @@ public:
 	void SetCollider(int id, Collider collider);
 
 
-private:
-	// Time
+
+	// Trak Time
 	float m_deltaTime; // Time since last update
 	std::chrono::time_point<std::chrono::steady_clock> m_start;
 	std::chrono::time_point<std::chrono::steady_clock> m_current;
@@ -42,16 +44,30 @@ private:
 	// Unique ID
 	int m_id; // Where this used?
 
-	// TooDo: int CreateId();
+	// ToDo: int CreateId();
 
 	// Component Arrays
 	// ToDo :std::vector<GameObject> _gameObjects;
 
 	std::vector<Transform> m_transform;
 	std::vector<Collider> m_collider;
+	
+	std::vector<GOActor> m_actors;
+	
+	
+	// ToDo: Best place to call this? I like in the constructor but also feels wrong.
+	/// <summary>
+	/// Adds GOActor into m_actors vector.
+	/// </summary>
+	void AddActor(GOActor &actor); // Agh more new. Maybe just leave note about the object pool planned changes if don't get there.
 
 
+	// Gameplay Logic
+	// System m_system
+
+	
 	// ToDo: Pause(), GetUI()
+
 	
 };
 

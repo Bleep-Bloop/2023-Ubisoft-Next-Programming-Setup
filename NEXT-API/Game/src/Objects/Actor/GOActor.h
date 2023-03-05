@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../GameObject.h"
-#include "../../App/SimpleSprite.h"
 
 enum class MovementDirection
 
@@ -16,7 +15,7 @@ enum class MovementDirection
 /// GOActor is a GameObject that has built-in movement logic. They are responsible for physical interaction between 
 /// Player/AI and the game world.
 /// </summary>
-class GOActor : GameObject
+class GOActor :  GameObject
 {
 
 public:
@@ -37,12 +36,26 @@ public:
 	// ToDo: void PlayAnimation();
 	// Note: I am going to have the animations in the specific characters struct.
 
+	/// <summary>
+	/// Passes input from the player to the GOActor
+	/// Note: Called from scene->Update();
+	/// </summary>
+	void HandlePlayerInput();
+
+	void Render() override;
+
+	void SetDeltaTime(float deltaTime);
+
+	void Destroy() override;
+
 private:
 
 	// Used in Move(); // ToDo: Move
 	float x, y; 
 
 	float characterMoveSpeed = 1;
+
+	float deltaTime = 0;
 
 };
 

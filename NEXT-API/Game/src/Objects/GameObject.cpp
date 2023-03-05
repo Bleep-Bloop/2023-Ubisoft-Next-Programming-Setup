@@ -36,6 +36,8 @@ Transform GameObject::GetTransform()
 
 void GameObject::Destroy()
 {
+	delete this->sprite;
+	delete this->scene;
 	delete this;
 }
 
