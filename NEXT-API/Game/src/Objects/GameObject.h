@@ -2,7 +2,7 @@
 
 #include "../Components/Transform/Transform.h"
 #include "../Components/Collider/Collider.h"
-#include "../Scene/Scene.h"
+
 
 	// ToDo: ChangeSprite() (Calls ChangeCollider() as well)
 	// ToDo: Change Collider()
@@ -24,33 +24,33 @@ class GameObject
 {
 public:
 	
-	GameObject(Scene& scene, CSimpleSprite& sprite, Transform transform);
+	GameObject(Scene &scene, CSimpleSprite &sprite, Transform transform);
 
-	GameObject() = default; 
+	GameObject() = default;
 
 	/// <summary>
 	/// Sets the GameObject's location, rotation, and scale (changes visible in sprite).
 	/// </summary>
 	/// <param name="sprite"> Visual representation</param>
 	/// <param name="transform"> Location, rotation, and scale (NOTE: scale currently scales the entire sprite based on scale.x)</param>
-	void SetTransform(Transform transform);
+	virtual void SetTransform(Transform transform);
 
 	/// <summary>
 	/// Returns GameObject's transform.
 	/// </summary>
 	/// <returns>Transform : GameObject's location, rotation, and scale.</returns>
-	Transform GetTransform();
+	virtual Transform GetTransform();
 
 	/// <summary>
 	/// Remove GameObject from game.
 	/// </summary>
-	void Destroy();
+	virtual void Destroy();
 
 	/// <summary>
 	/// Draws the GameObject sprite.
 	/// IMPORTANT - Must be called from Game.cpp->Render().
 	/// </summary>
-	void Render();
+	virtual void Render();
 
 protected:
 
