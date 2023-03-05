@@ -50,6 +50,10 @@ private:
 	std::vector<Transform> m_transform;
 	std::vector<Collider> m_collider;
 
+	// Gameplay Logic
+	// System m_system
+
+
 
 	// ToDo: Pause(), GetUI()
 	
