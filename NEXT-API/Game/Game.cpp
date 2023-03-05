@@ -1,10 +1,14 @@
 #include "stdafx.h"
 #include "./src/App/app.h"
 #include <math.h>  
+#include "src/Scene/Scene.h"
+
 // Tests
 #include "./src//Math/Vector3/Vector3Test.cpp"
 #include "./src/Objects/GameObjectTest.cpp"
 
+
+Scene scene; 
 
 //------------------------------------------------------------------------
 // Called before first update. Do any initial setup here.
@@ -21,7 +25,11 @@ void Init()
 	OutputDebugStringA(resultString2.c_str());
 	GameObjectTest::RunTests();
 #endif // DEBUG
-		
+
+
+
+	scene.Init();
+	// ui.Init(scene);
 
 }
 
@@ -34,6 +42,8 @@ void Update(float deltaTime)
 
 }
 
+
+// NOTE: Called continously like Update()
 //------------------------------------------------------------------------
 // Add your display calls here (DrawLine,Print, DrawSprite.) 
 // See App.h 
@@ -41,9 +51,6 @@ void Update(float deltaTime)
 void Render()
 {
 
-	// Note: I added a render to GameObject to call the Draw() function from the sprite
-	// ToDo: Loop through the scene's gameObject vector and call Render on each gameObject.
-	
 }
 
 //------------------------------------------------------------------------
