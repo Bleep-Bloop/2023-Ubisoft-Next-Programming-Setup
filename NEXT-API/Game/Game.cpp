@@ -11,11 +11,12 @@
 //------------------------------------------------------------------------
 #include <string>
 #include "./src//Math/Vector3/Vector3Test.cpp"
+#include "./src/Objects/GameObjectTest.cpp"
 
 //------------------------------------------------------------------------
 // Eample data....
 //------------------------------------------------------------------------
-CSimpleSprite* testSprite;
+CSimpleSprite* testSprite; // Question why no new?
 enum
 {
 	ANIM_FORWARDS,
@@ -23,30 +24,49 @@ enum
 	ANIM_LEFT,
 	ANIM_RIGHT,
 };
+
 //------------------------------------------------------------------------
+
+/// TESTING GAME OBJECT
+//#include "./src/Objects/GameObject.h"
+
+
+
 
 //------------------------------------------------------------------------
 // Called before first update. Do any initial setup here.
 //------------------------------------------------------------------------
 void Init()
 {
-
+	// ToDo: Ifdef Debug run tests or something
+	
+	//------------------------------------------------------------------------
+	// TESTS
 	std::string resultString = ("Vector3Tests:  \n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
 	OutputDebugStringA(resultString.c_str());
 	Vector3Test::RunTests();
 
+	std::string resultString2 = ("GameObjectTests:\n"); // You must change this print to get an update printed to the immediate window. Adding white space after colon works perfectly.
+	OutputDebugStringA(resultString2.c_str());
+	GameObjectTest::RunTests();
+	//------------------------------------------------------------------------
+
+	// Create robot
+	testSprite = App::CreateSprite(".\\data\\steambot_03.bmp", 5, 1);
 	
 
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
+	/*
 	testSprite = App::CreateSprite(".\\Data\\Test.bmp", 8, 4);
-	testSprite->SetPosition(400.0f, 400.0f);
+	testSprite->SetPosition(2000.0f, 2000.0f); //(400.0f, 400.0f);
 	float speed = 1.0f / 15.0f;
 	testSprite->CreateAnimation(ANIM_BACKWARDS, speed, { 0,1,2,3,4,5,6,7 });
 	testSprite->CreateAnimation(ANIM_LEFT, speed, { 8,9,10,11,12,13,14,15 });
 	testSprite->CreateAnimation(ANIM_RIGHT, speed, { 16,17,18,19,20,21,22,23 });
 	testSprite->CreateAnimation(ANIM_FORWARDS, speed, { 24,25,26,27,28,29,30,31 });
 	testSprite->SetScale(1.0f);
+	*/
 	//------------------------------------------------------------------------
 }
 
@@ -128,17 +148,23 @@ void Render()
 {
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
-	testSprite->Draw();
+	//testSprite->Draw();
 	//------------------------------------------------------------------------
+	
+
+	// Note: I added a render to GameObject to call the Draw() functino from the sprite
+	// ToDo: Loop through the scene's gameObject vector and call Render on each gameObject.
+	
 
 	//------------------------------------------------------------------------
 	// Example Text.
 	//------------------------------------------------------------------------
-	App::Print(100, 100, "Sample Text");
+	App::Print(0, 750, "Bomber Boy");
 
 	//------------------------------------------------------------------------
 	// Example Line Drawing.
 	//------------------------------------------------------------------------
+	/*
 	static float a = 0.0f;
 	float r = 1.0f;
 	float g = 1.0f;
@@ -155,6 +181,7 @@ void Render()
 		b = (float)i / 20.0f;
 		App::DrawLine(sx, sy, ex, ey, r, g, b);
 	}
+	*/
 
 }
 //------------------------------------------------------------------------
@@ -163,8 +190,10 @@ void Render()
 //------------------------------------------------------------------------
 void Shutdown()
 {
+
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
 	delete testSprite;
+	//gameObject->Destroy();
 	//------------------------------------------------------------------------
 }
