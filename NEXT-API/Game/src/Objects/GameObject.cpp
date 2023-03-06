@@ -1,9 +1,12 @@
 #include "stdafx.h"
 #include "GameObject.h"
 
+#include "../Math/Random/RandomUtility.h"
 
-GameObject::GameObject(Scene& scene, CSimpleSprite &sprite, Transform transform)
+GameObject::GameObject(Scene& scene, CSimpleSprite &sprite, Transform transform) 
 {
+	// ToDo: Immediately change this. It's just gambling.
+	this->uniqueID = RandomUtility::RandomInt(0, 10000);
 
 	this->sprite = &sprite;
 	
@@ -11,7 +14,7 @@ GameObject::GameObject(Scene& scene, CSimpleSprite &sprite, Transform transform)
 
 	this->scene = &scene;
 
-	// ToDo: Add to scene's GameObject vector. existingGameObjects.push_back(this); 
+	this->collider.radius = (this->sprite->GetWidth() / 2); // Derive collision based on sprite size
 
 }
 
@@ -29,9 +32,14 @@ void GameObject::SetTransform(Transform transform)
 	
 }
 
-Transform GameObject::GetTransform()
+Transform GameObject::GetTransform() const
 {
 	return this->transform;
+}
+
+Collider GameObject::GetCollider() const
+{
+	return this->collider;
 }
 
 void GameObject::Destroy()
@@ -44,4 +52,9 @@ void GameObject::Destroy()
 void GameObject::Render()
 {
 	this->sprite->Draw();
+}
+
+int GameObject::GetID() const
+{
+	return uniqueID;
 }
