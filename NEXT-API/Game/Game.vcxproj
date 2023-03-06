@@ -190,8 +190,10 @@
     <ClInclude Include="include\targetver.h" />
     <ClInclude Include="src\Character\Character.h" />
     <ClInclude Include="src\Components\Collider\Collider.h" />
+    <ClInclude Include="src\Components\Physics\Physics.h" />
     <ClInclude Include="src\Components\Transform\Transform.h" />
     <ClInclude Include="src\Graphics\Renderer\Renderer.h" />
+    <ClInclude Include="src\Math\Random\RandomUtility.h" />
     <ClInclude Include="src\Math\Vector3\Vector3.h" />
     <ClInclude Include="src\Objects\GameObject.h" />
     <ClInclude Include="src\Objects\Actor\GOActor.h" />
@@ -213,8 +215,10 @@
     </ClCompile>
     <ClCompile Include="src\Character\Character.cpp" />
     <ClCompile Include="src\Components\Collider\Collider.cpp" />
+    <ClCompile Include="src\Components\Physics\Physics.cpp" />
     <ClCompile Include="src\Components\Transform\Transform.cpp" />
     <ClCompile Include="src\Graphics\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Math\Random\RandomUtility.cpp" />
     <ClCompile Include="src\Math\Vector3\Vector3.cpp" />
     <ClCompile Include="src\Math\Vector3\Vector3Test.cpp" />
     <ClCompile Include="src\Objects\GameObject.cpp" />

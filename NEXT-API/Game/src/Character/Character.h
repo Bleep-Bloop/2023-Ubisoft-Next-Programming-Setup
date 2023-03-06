@@ -36,6 +36,7 @@ struct BoomBot : Character
 	float PlayerHealth = 3;
 	float MaxActiveBombs = 3;
 	CSimpleSprite* Sprite;
+	//std::string SpriteBMPAddress = ".\\..\\Data\\steambot_03.bmp";
 
 	BoomBot::BoomBot()
 	{

@@ -3,22 +3,11 @@
 #include "../Components/Transform/Transform.h"
 #include "../Components/Collider/Collider.h"
 
-
-	// ToDo: ChangeSprite() (Calls ChangeCollider() as well)
-	// ToDo: Change Collider()
-	// ToDo: I don't like creating sprite outside. I could handle testSprite = App::CreateSprite("..\..\data\steambot_03.bmp", 5, 1) 
-	//	in a function here to keep project clean
-	// ToDo: Handle this in Scene. static std::vector<GameObject*> allGameObjects; Scene reference in constructor to push_back.
-	// ToDo: Implement Collision
-	// ToDo: Collider collider;
-	// ToDo: Collider GetCollider();
-	// ToDo: OnHit function()
-	// ToDo: Unique identifier. Creation should be handled in Scene.
-	// ToDo:int ID; // Const? public get private set?
+// ToDo: ChangeSprite() & ChangeCollider() 
 
 /// <summary>
 /// GameObjects are items with physical representations in the game world,
-/// they feature sprites, transforms, and colliders.
+/// they contain sprites, transforms, and colliders.
 /// </summary>
 class GameObject
 {
@@ -35,16 +24,11 @@ public:
 	/// <param name="transform"> Location, rotation, and scale (NOTE: scale currently scales the entire sprite based on scale.x)</param>
 	virtual void SetTransform(Transform transform);
 
-	/// <summary>
-	/// Returns GameObject's transform.
-	/// </summary>
-	/// <returns>Transform : GameObject's location, rotation, and scale.</returns>
-	virtual Transform GetTransform();
+	virtual Transform GetTransform() const;
 
-	/// <summary>
-	/// Remove GameObject from game.
-	/// </summary>
-	virtual void Destroy();
+	virtual Collider GetCollider() const;
+
+	virtual int GetID() const;
 
 	/// <summary>
 	/// Draws the GameObject sprite.
@@ -52,13 +36,23 @@ public:
 	/// </summary>
 	virtual void Render();
 
+	/// <summary>
+	/// Remove GameObject from game.
+	/// </summary>
+	virtual void Destroy();
+
 protected:
 
 	Transform transform;
 
 	CSimpleSprite* sprite;
+
+	Collider collider;
 	
 	Scene* scene;
+
+	// Identifying number assigned on construction ToDo: *
+	int uniqueID;
 
 };
 
