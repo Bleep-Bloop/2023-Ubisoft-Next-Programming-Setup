@@ -81,6 +81,9 @@ void GOActor::PhysicsMove(float time)
 	// Then we set our transform to newLocation - this->SetTransform(newLocation);
 
 
+	// WARNING: Circle colliders can cause issues with blending into walls.
+	// ToDo: Square Colliders
+
 	// Note/ToDo: Could be a cool character mechanic, force player to slide around on ice.
 	// Clear movement vector to prevent slippery/ice feeling.
 	
