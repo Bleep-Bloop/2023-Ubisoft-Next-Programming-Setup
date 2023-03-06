@@ -10,6 +10,7 @@
 
 Scene scene; 
 
+
 //------------------------------------------------------------------------
 // Called before first update. Do any initial setup here.
 //------------------------------------------------------------------------
@@ -31,6 +32,8 @@ void Init()
 	scene.Init();
 	// ui.Init(scene);
 
+			
+
 }
 
 //------------------------------------------------------------------------
@@ -39,6 +42,9 @@ void Init()
 //------------------------------------------------------------------------
 void Update(float deltaTime)
 {
+	
+	scene.Update(deltaTime);
+	//madeCharacter->SetDeltaTime(deltaTime);
 
 }
 
@@ -50,6 +56,8 @@ void Update(float deltaTime)
 //------------------------------------------------------------------------
 void Render()
 {
+	scene.Render();
+	
 
 }
 
