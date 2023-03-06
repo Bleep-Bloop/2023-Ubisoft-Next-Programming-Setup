@@ -9,7 +9,7 @@
 
 
 Scene scene; 
-
+GameManager gameManager;
 
 //------------------------------------------------------------------------
 // Called before first update. Do any initial setup here.
@@ -30,6 +30,7 @@ void Init()
 
 
 	scene.Init();
+	gameManager.Init();
 	// ui.Init(scene);
 
 			
@@ -56,10 +57,12 @@ void Update(float deltaTime)
 //------------------------------------------------------------------------
 void Render()
 {
+
 	scene.Render();
-	
+	gameManager.DrawMapGrid(14, 11); // These numbers are a good size
 
 }
+
 
 //------------------------------------------------------------------------
 // Add your shutdown code here. Called when the APP_QUIT_KEY is pressed.

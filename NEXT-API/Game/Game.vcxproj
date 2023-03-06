@@ -198,6 +198,7 @@
     <ClInclude Include="src\Objects\GameObject.h" />
     <ClInclude Include="src\Objects\Actor\GOActor.h" />
     <ClInclude Include="src\Scene\Scene.h" />
+    <ClInclude Include="src\Systems\GameManager\GameManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App\app.cpp" />
@@ -225,6 +226,7 @@
     <ClCompile Include="src\Objects\GameObjectTest.cpp" />
     <ClCompile Include="src\Objects\Actor\GOActor.cpp" />
     <ClCompile Include="src\Scene\Scene.cpp" />
+    <ClCompile Include="src\Systems\GameManager\GameManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

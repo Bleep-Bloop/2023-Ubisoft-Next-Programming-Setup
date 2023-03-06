@@ -5,6 +5,7 @@
 #include "../Components/Collider/Collider.h"
 #include "../src/Objects/Actor/GOActor.h"
 #include "../Objects/GameObject.h"
+#include "../Systems/GameManager/GameManager.h"
 
 
 struct Vector3;

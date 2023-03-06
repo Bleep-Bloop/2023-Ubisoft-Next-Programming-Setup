@@ -1,4 +1,9 @@
-﻿  GOActor.cpp
-  Game.vcxproj -> C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\x64\Debug\Game.exe
-  C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\\Game\glut\bin\x64\freeglut.dll
-  1 File(s) copied
+﻿  Game.cpp
+C:\Users\Taisen\Desktop\2023-Ubisoft-Next-Programming-Setup\NEXT-API\Game\Game.cpp(67,1): error C2143: syntax error: missing ';' before '}'
+  Collider.cpp
+  Renderer.cpp
+  GOActor.cpp
+  GameObjectTest.cpp
+  Scene.cpp
+  GameManager.cpp
+  Generating Code...
