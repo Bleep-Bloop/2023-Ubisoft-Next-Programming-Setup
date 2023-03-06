@@ -1,27 +1,41 @@
 #include "stdafx.h"
 #include "Collider.h"
-
 #include "../src/Scene/Scene.h"
 
 
-
-Collider::Collider() : radius(0.0f)
+Collider::Collider() : radius(0.0f), isTrigger(false)
 {
 }
 
-bool Collider::IsHit(Scene &scene, int a, int b)
+bool Collider::IsHit(Scene &scene, int ID, Transform aTransform, Collider aCollider, int otherID, Transform bTransform, Collider bCollider)
 {
 
-    Vector3 from = scene.GetTransform(a).position;
-    Vector3 to = scene.GetTransform(b).position;
-
-    if (Vector3::Distance(from, to) > scene.GetCollider(a).radius + scene.GetCollider(b).radius)
+    if (ID != otherID)
     {
-        return false;
+
+        Vector3 from = aTransform.position;
+        Vector3 to = bTransform.position;
+
+        if (Vector3::Distance(from, to) < aCollider.radius + bCollider.radius)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+   
     }
     else
     {
-        return true;
+        // If the item is checking against itself flag false.
+        return false;
     }
 
+}
+
+// ToDo: Implementation
+bool Collider::IsOverlapping(Scene& scene, int ID, Transform aTransform, Collider aCollider, int otherID, Transform bTransform, Collider bCollider)
+{
+    return false;
 }
